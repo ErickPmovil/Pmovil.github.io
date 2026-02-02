@@ -1,0 +1,305 @@
+/* RESET */
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  background: #eef4f8;
+  font-family: sans-serif;
+}
+
+/* ======================
+   MENÚ
+====================== */
+.menu{
+  background-color: #1e3a5f;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 0 60px;
+}
+
+/* LOGO */
+.logo img{
+  height: 160px;
+  width: auto;
+  display: block;
+  padding-top: 5px;
+}
+
+/* NAV */
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* LISTA */
+.menu-lista{
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+/* BOTÓN PRINCIPAL */
+.item-link{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  border-bottom: 2px solid transparent;
+
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.item-link:hover{
+  background:#274c77;
+  border-bottom-color: #ffffff;
+}
+
+.item-link:focus{ outline: none; }
+
+.caret{
+  font-size: 14px;
+  transform: translateY(1px);
+  opacity: 0.85;
+}
+
+.dropdown{ position: relative; }
+
+.submenu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 240px;
+
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 18px 35px rgba(0,0,0,.18);
+
+  display: none;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.submenu li a{
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  transition: background .2s ease;
+}
+
+.submenu li a:hover{
+  background: #dff3f6;
+}
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu{
+  display: block;
+}
+
+.dropdown:hover .caret,
+.dropdown:focus-within .caret{
+  transform: translateY(1px) rotate(180deg);
+}
+
+
+
+
+/* Parte inferior: precios + botón */
+.card-precio{
+  text-align: center;
+  padding: 12px 14px 18px;
+}
+
+.desde{
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  color: #222;
+}
+
+.precio{
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 5px 0 2px;
+}
+
+.antes{
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Botón tipo borde rojo (como en tu imagen) */
+.btn-card{
+  display: inline-block;
+  padding: 6px 18px;
+  border: 1.5px solid red;
+  border-radius: 20px;
+  color: red;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  
+}
+
+/* Hover suave */
+.btn-card:hover{
+  background: red;
+  color: #fff;
+}
+
+
+.video-box{
+  margin-top: 16px;      /* espacio arriba (poco) */
+  margin-bottom: 60px;  /* 🔥 MÁS espacio abajo */
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrap{
+  width: 95%;
+  max-width: 1200px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.video-wrap iframe{
+  width: 100%;
+  height: 460px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 700px){
+  .video-wrap iframe{
+    height: 240px;
+  }
+}
+
+  
+
+
+
+
+.detalle-wrap{
+  width: calc(100% - 200px);
+  margin: 30px auto 60px;
+}
+
+.detalle-card{
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+  padding: 24px;
+}
+
+.detalle-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+
+
+/* Imagen dentro de la caja */
+.detalle-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* NO se deforma */
+}
+
+
+
+
+
+/* Título */
+.detalle-titulo{
+  font-family: Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.detalle-texto{
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 14px;
+}
+
+/* Tabla bonita */
+.tabla-carac{
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.tabla-carac th{
+  text-align: left;
+  padding: 12px 14px;
+  background: #cfcfd6;  /* gris como tus cards */
+  font-size: 14px;
+  color: #111;
+}
+
+.tabla-carac td{
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #111;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.95);
+}
+
+.tabla-carac tr:nth-child(even) td{
+  background: rgba(223,243,246,0.6); /* celeste suave */
+}
+
+/* Responsive simple */
+@media (max-width: 900px){
+  .detalle-grid{
+    grid-template-columns: 1fr;
+  }
+  .detalle-img{
+    max-width: 360px;
+  }
+}
+/* Caja fija para la imagen */
+.detalle-img-box{
+  width: 100%;
+  max-width: 680px;   /* 👈 ancho del espacio, NO de la imagen */
+  height: 580px;;      /* 👈 altura fija */
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
