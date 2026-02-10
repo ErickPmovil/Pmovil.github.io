@@ -1,0 +1,232 @@
+/* ======================
+   RESET / BASE
+====================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body{
+  background: #eef4f8;
+  font-family: sans-serif;
+}
+
+/* ======================
+   MENÚ
+====================== */
+.menu{
+  background-color: #1e3a5f;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 0 60px;
+}
+
+/* LOGO */
+.logo img{
+  height: 160px;
+  width: auto;
+  display: block;
+  padding-top: 5px;
+}
+
+/* NAV */
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* LISTA */
+.menu-lista{
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+/* BOTÓN PRINCIPAL */
+.item-link{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items:center ;
+  gap: 10px;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+
+  padding: 10px 12px;
+  border-radius: 12px;
+  border-bottom: 2px solid transparent;
+
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.item-link:hover{
+  background:#274c77;
+  border-bottom-color: #ffffff;
+}
+
+.item-link:focus{ outline: none; }
+
+.caret{
+  font-size: 14px;
+  transform: translateY(1px);
+  opacity: 0.85;
+}
+
+.dropdown{ position: relative; }
+
+/* SUBMENÚ */
+.submenu{
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 240px;
+
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 18px 35px rgba(0,0,0,.18);
+
+  display: none;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+}
+
+.submenu li a{
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  transition: background .2s ease;
+}
+
+.submenu li a:hover{
+  background: #dff3f6;
+}
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu{
+  display: block;
+}
+
+.dropdown:hover .caret,
+.dropdown:focus-within .caret{
+  transform: translateY(1px) rotate(180deg);
+}
+/* ======================
+   BOTÓN DERECHO MENÚ
+====================== */
+.menu-boton-derecha{
+  position: absolute;
+  right: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-menu{
+  text-decoration: none;
+  background: transparent;
+  border: none;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+
+  padding: 10px 14px;
+  border-radius: 12px;
+  border-bottom: 2px solid transparent;
+
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.btn-menu:hover{
+  background: #274c77;
+  border-bottom-color: #ffffff;
+}
+
+
+
+
+
+
+.page{
+  width: min(920px, calc(100% - 40px));
+  margin: 40px auto 60px;
+}
+
+.card{
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* ======================
+   TITULO
+====================== */
+.title{
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  color: #0b1b2b;
+  margin-bottom: 18px;
+  letter-spacing: .2px;
+}
+
+/* ======================
+   TEXTO
+====================== */
+.text{
+  font-size: 17px;
+  line-height: 1.85;
+  color: #2b2b2b;
+  text-align: justify;
+  margin: 12px auto;
+}
+
+/* ======================
+   FOTO
+====================== */
+.photo-wrap{
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.photo{
+  width: min(320px, 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,.16);
+}
+/* ======================
+   META INFO
+====================== */
+.meta{
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+}

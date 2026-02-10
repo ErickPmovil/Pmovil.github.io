@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finalizar compra</title>
+
+  <link rel="stylesheet" href="../CSS/comprar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- Barra superior simple -->
+  <header class="topbar">
+    <a class="topbar-back" href="../index.html">← Volver</a>
+    <h1 class="topbar-title">Finalizar compra</h1>
+  </header>
+
+  <main class="checkout">
+    <!-- IZQUIERDA: Producto -->
+    <section class="card-box">
+      <h2 class="box-title">Tu producto</h2>
+
+      <div class="product">
+        <img id="prodImg" class="product-img" src="" alt="Producto">
+        <div>
+          <p id="prodName" class="product-name">Producto</p>
+          <p class="product-sub">Precio</p>
+          <p id="prodPrice" class="product-price">$0,00</p>
+        </div>
+      </div>
+
+      <div class="resume">
+        <div class="resume-row">
+          <span>Subtotal</span>
+          <strong id="subTotal">$0,00</strong>
+        </div>
+        <div class="resume-row">
+          <span>Envío</span>
+          <strong>$0,00</strong>
+        </div>
+        <div class="resume-row total">
+          <span>Total</span>
+          <strong id="total">$0,00</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- DERECHA: Datos -->
+    <section class="card-box">
+      <h2 class="box-title">Datos para comprar</h2>
+
+      <form id="buyForm" novalidate>
+        <div class="grid-2">
+          <div class="field">
+            <label>Nombres *</label>
+            <input id="nombres" type="text" placeholder="Ej: Erick" required>
+            <small class="error" id="err-nombres"></small>
+          </div>
+
+          <div class="field">
+            <label>Apellidos *</label>
+            <input id="apellidos" type="text" placeholder="Ej: Casamin" required>
+            <small class="error" id="err-apellidos"></small>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Tipo de identificación *</label>
+            <select id="tipoId" required>
+              <option value="">Selecciona...</option>
+              <option value="Cédula">Cédula</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <small class="error" id="err-tipoId"></small>
+          </div>
+
+          <div class="field">
+            <label>Número de identificación *</label>
+            <input id="numId" type="text" placeholder="Ej: 070xxxxxxx" required>
+            <small class="error" id="err-numId"></small>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Teléfono *</label>
+            <input id="telefono" type="tel" placeholder="Ej: +593 99 999 9999" required>
+            <small class="error" id="err-telefono"></small>
+          </div>
+
+          <div class="field">
+            <label>Email *</label>
+            <input id="email" type="email" placeholder="Ej: correo@gmail.com" required>
+            <small class="error" id="err-email"></small>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="field">
+            <label>Provincia *</label>
+            <input id="provincia" type="text" placeholder="Ej: El Oro" required>
+            <small class="error" id="err-provincia"></small>
+          </div>
+
+          <div class="field">
+            <label>Ciudad *</label>
+            <input id="ciudad" type="text" placeholder="Ej: Machala" required>
+            <small class="error" id="err-ciudad"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Dirección *</label>
+          <input id="direccion" type="text" placeholder="Ej: Av. España 1234, casa #2" required>
+          <small class="error" id="err-direccion"></small>
+        </div>
+
+        <div class="field">
+          <label>Referencia (opcional)</label>
+          <input id="referencia" type="text" placeholder="Ej: Frente al parque">
+        </div>
+
+        <!-- MÉTODO DE PAGO -->
+        <div class="pago-box">
+          <div class="pago-head">
+            <h3>Método de pago</h3>
+            <div class="pay-icons" title="Pago simulado">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Número de tarjeta *</label>
+            <input id="cardNumber" type="text" placeholder="1234 1234 1234 1234" maxlength="19" required>
+            <small class="error" id="err-cardNumber"></small>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label>MM/AA *</label>
+              <input id="cardExp" type="text" placeholder="MM/AA" maxlength="5" required>
+              <small class="error" id="err-cardExp"></small>
+            </div>
+
+            <div class="field">
+              <label>CVC *</label>
+              <input id="cardCvc" type="text" placeholder="123" maxlength="4" required>
+              <small class="error" id="err-cardCvc"></small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Nombre del titular *</label>
+            <input id="cardHolder" type="text" placeholder="Nombre como aparece en la tarjeta" required>
+            <small class="error" id="err-cardHolder"></small>
+          </div>
+
+          <p class="pago-nota">
+          Pago simulado para fines académicos.  
+          </p>
+        </div>
+
+        <button class="btn-confirm" type="submit">Confirmar pedido</button>
+        
+      </form>
+    </section>
+  </main>
+
+  <script src="comprar.js"></script>
+</body>
+</html>

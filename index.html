@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>P Movil</title>
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ======================
+       HEADER / MENÚ
+  ======================= -->
+  <header class="menu">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/premake.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Menú -->
+    <nav class="nav">
+      <ul class="menu-lista">
+
+        <!-- TIENDA -->
+        <li class="item dropdown">
+          <button class="item-link" type="button">
+            Tienda <span class="caret">▾</span>
+          </button>
+
+          <ul class="submenu">
+            <li><a href="paginas-secundarias/tiendaSamsung.html">Teléfonos Samsung</a></li>
+            <li><a href="paginas-secundarias/tiendaXiaomi.html">Teléfonos Xiaomi</a></li>
+            <li><a href="paginas-secundarias/tiendaiPhone.html">Teléfonos iPhone</a></li>
+          </ul>
+        </li>
+
+        <!-- ATENCIÓN AL CLIENTE -->
+        <li class="item dropdown">
+          <button class="item-link" type="button">
+            Atención al Cliente <span class="caret">▾</span>
+          </button>
+
+          <ul class="submenu">
+            <li><a href="paginas-secundarias/enviarreporte.html">Enviar reporte</a></li>
+          </ul>
+        </li>
+
+        <!-- SOBRE NOSOTROS -->
+        <li class="item dropdown">
+          <button class="item-link" type="button">
+            Sobre Nosotros <span class="caret">▾</span>
+          </button>
+
+          <ul class="submenu">
+            <li><a href="paginas-secundarias/ubicacion.html">Ubicación</a></li>
+            <li><a href="paginas-secundarias/mision.html">Misión</a></li>
+            <li><a href="paginas-secundarias/vision.html">Visión</a></li>
+          </ul>
+        </li>
+        
+
+      </ul>
+    </nav>
+    <!-- BOTÓN DERECHO -->
+<div class="menu-boton-derecha">
+  <a href="paginas-secundarias/autores.html" class="btn-menu">
+    Autores
+  </a>
+</div>
+  </header>
+
+  <!-- ======================
+       BANNER CARRUSEL
+  ======================= -->
+  <section class="banner-carrusel">
+    <button class="flecha-carrusel flecha-izq" id="prev">❮</button>
+    <div class="banner-img" id="banner"></div>
+    <button class="flecha-carrusel flecha-der" id="next">❯</button>
+  </section>
+
+  <!-- ======================
+       BENEFICIOS
+  ======================= -->
+  <section class="beneficios">
+    <div class="beneficio">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>Envío rápido</h3>
+      <p>Entregas en Machala y alrededores.</p>
+    </div>
+
+    <div class="beneficio">
+      <i class="fa-solid fa-shield-halved"></i>
+      <h3>Garantía</h3>
+      <p>Productos con garantía y soporte.</p>
+    </div>
+
+    <div class="beneficio">
+      <i class="fa-solid fa-lock"></i>
+      <h3>Pago seguro</h3>
+      <p>Compra protegida (simulación).</p>
+    </div>
+
+    <div class="beneficio">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Soporte</h3>
+      <p>Atención al cliente rápida.</p>
+    </div>
+  </section>
+
+  <!-- ======================
+       LO MÁS VENDIDO
+  ======================= -->
+  <section class="mas-vendido">
+    <h2 class="titulo-seccion">Lo Mas Vendido</h2>
+
+    <div class="productos">
+
+      <!-- TARJETA 1 -->
+      <article class="card">
+        <a class="card-link" href="detalles/detalleRedminNote15Pro5G.html">
+          <div class="card-top">
+            <p class="card-nombre">REDMI</p>
+            <p class="card-modelo">NOTE 15PRO 5G</p>
+          </div>
+
+          <div class="card-body">
+            <img class="card-img" src="img/REDMINOTE15PRO5G.png" alt="Redmi Note 15 Pro 5G">
+          </div>
+
+          <div class="card-precio">
+            <p class="desde">Ahora desde</p>
+            <p class="precio">$799,00</p>
+            <p class="antes">Antes: $899,00</p>
+            <span class="btn-card">Conoce más</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- TARJETA 2 -->
+      <article class="card">
+        <a class="card-link" href="detalles/detalleiPhone17ProMax.html">
+          <div class="card-top">
+            <p class="card-nombre">iPhone</p>
+            <p class="card-modelo">17 Pro Max</p>
+          </div>
+
+          <div class="card-body">
+            <img class="card-img" src="img/iphone17promax.png" alt="iPhone 17 Pro Max">
+          </div>
+
+          <div class="card-precio">
+            <p class="desde">Ahora desde</p>
+            <p class="precio">$699,00</p>
+            <p class="antes">Antes: $799,00</p>
+            <span class="btn-card">Conoce más</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- TARJETA 3 -->
+      <article class="card">
+        <a class="card-link" href="detalles/detalleSamsungZFold.html">
+          <div class="card-top">
+            <p class="card-nombre">SAMSUNG</p>
+            <p class="card-modelo">Galaxy Z Fold</p>
+          </div>
+
+          <div class="card-body">
+            <img class="card-img" src="img/samsunggalaxyZFold.png" alt="Samsung Galaxy Z Fold">
+          </div>
+
+          <div class="card-precio">
+            <p class="desde">Ahora desde</p>
+            <p class="precio">$2000,00</p>
+            <p class="antes">Antes: $2349,00</p>
+            <span class="btn-card">Conoce más</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- TARJETA 4 -->
+      <article class="card">
+        <a class="card-link" href="detalles/detalleSamsungS23.html">
+          <div class="card-top">
+            <p class="card-nombre">SAMSUNG</p>
+            <p class="card-modelo">Galaxy S23</p>
+          </div>
+
+          <div class="card-body">
+            <img class="card-img" src="img/samsunggalaxys23.png" alt="Samsung Galaxy S23">
+          </div>
+
+          <div class="card-precio">
+            <p class="desde">Ahora desde</p>
+            <p class="precio">$799,00</p>
+            <p class="antes">Antes: $899,00</p>
+            <span class="btn-card">Conoce más</span>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======================
+       PROMOCIONES
+  ======================= -->
+  <section class="promociones">
+    <h2 class="titulo-seccion">Nuestras promociones</h2>
+
+    <div class="promo-card">
+      <button class="promo-flecha izq" id="promoPrev" type="button">❮</button>
+      <button class="promo-flecha der" id="promoNext" type="button">❯</button>
+
+      <div class="promo-contenido">
+        <div class="promo-img">
+          <img id="promoImagen" src="img/bannersamsunggalaxys25ultra.png" alt="Promoción">
+        </div>
+
+        <div class="promo-info">
+          <h2 id="promoNombre">Samsung Galaxy S25 Ultra</h2>
+          <p id="promoIncluye">Incluye: cargador + case</p>
+          <p class="promo-precio" id="promoPrecio">$1.229,00</p>
+          <a id="promoLink" href="detalles/detalleSamsungS25Ultra.html" class="promo-btn">Conocer más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================
+       FOOTER
+  ======================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+
+        <div class="footer-link">
+          <h4>Compañia</h4>
+          <ul>
+            <li><a href="paginas-secundarias/ubicacion.html">Ubicacion</a></li>
+            <li><a href="paginas-secundarias/vision.html">Vision</a></li>
+            <li><a href="paginas-secundarias/mision.html">Mision</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-link">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="paginas-secundarias/enviarreporte.html">Enviar Reporte</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-link">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="paginas-secundarias/tiendaSamsung.html">Samsung</a></li>
+            <li><a href="paginas-secundarias/tiendaiPhone.html">iPhone</a></li>
+            <li><a href="paginas-secundarias/tiendaXiaomi.html">Xiaomi</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-link">
+          <h4>Siguenos</h4>
+          <div class="social-link">
+            <a href="https://www.facebook.com/pmovil.ec/"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
